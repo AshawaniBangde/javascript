@@ -1,0 +1,367 @@
+1.WHAT IS JAVASCRIPT ?
+=> js improves the user experience of the web page by converting  it from a statis page into an inetactive one.
+or
+=> javascript  is to used update and chage both html and css on web page.
+
+2. WHY JAVASCRIPT ?
+=> most programming language in userd world wide
+
+3. HISTORY OF JAVASCRIPT ?
+=> 1995 CREATED BY BRENDAN EICH AT JUST 10 DAYS
+
+MOCHA -> LIVESCRIPT -> JAVASCRIPT (NAME OF JS)
+
+1996 JS WAS CREATED
+1997 - ECMA ONTERNATIONAL (SUBMIT KIYA GYA )
+2015 - ES6/ ECMASCRIPT 2015 (EVERY YEAR CHNAGE AYENGE)
+
+4. console.log is used to log (print) a message to the console.
+
+variables=>
+variables are containers for data.
+
+javascript is dyanamically type language. (hame apna code ka type nhi batana pdta thats why they called in dyanamically type language)
+
+(= assigment opertor)
+
+Variables Rules=>
+1. variables names are case sensitive "a" & "A" different.
+2. Only letter , digits ,underscore(_) and $ is allowed (not even space)
+3. Only a letter, uderscore (_) or should be 1ST character .
+4. reserved words connot be variable names. (break, case ,catch,class, const,continue,debugger,default,delete,etc)
+
+fullName => camelcase
+full_name =>snakecase
+full-name => kabab case
+FullName => pascal case 
+
+ye define krte hai varible ko define krte in javascript
+
+5.let,const & var (keywords)
+var: Variable can be re-declared & update , A global scope varible.
+let : Variable cantnot be re-declared but can be updated . A block scope varible
+const: Variable cannot be re-declared or update , A block scope varible.
+
+
+6. ES-6 ECMA SCRIPT (2015) NEW RULES
+LET,CONST AYA.
+<!-- END SHARDA KHAPRA -->
+
+<!-- BY THAPA -->
+7.VALUES & VARIABLE
+variable in like containter to stored the value.
+
+var myName = 'geeta'
+var=(keyword)
+myname = variable name
+geeta = value
+
+8. DATATYPE
+THERE ARE TWO TYPE OF DATATYPE
+1. primative datatype => string, number , boolean,undefined, null, bigint,sysmbol
+2. object datatype =>an object, an array, a date 
+
+a) Number: Represents numeric values , including intergers and floating-point numbers.
+
+var myfav = -5;
+console.log(myfav);
+
+b) String: Represents a sequence of charecter enclosed in single or double quotes.
+var myName = 'vinod';
+console.log(myName);
+
+c) Boolean: Represents a logical enity with two values :true or false
+
+var isReaning = true;
+
+d) undefined: represents the absence of value or unitialized varible.
+var vinod; 
+console.log(vinod);
+
+e) Null: represents the absence of the value .its is often used explicitu indicate that a varible or object properly has no assigned value.
+
+var badMemories = null;
+
+f) Bigint = Represents intergers of arbittary precision (available since ECMAscript 2020)
+   const bigNumber = 1234754765725574576524727756752657663487638634n;
+
+g) Sysmbol : Represents a unique and immutable data type, often to create unique idenitifires.
+
+1.differnce between null undefined in js ??
+var create an leave it no value will be assign that is undefined 
+and null in value will assign in null that is called null.
+
+2.what is purpose of 'typeof null' in js?
+
+Example=>
+
+var MyName = "vinod"
+console.log(typeof myName);
+string
+
+
+var Myname = 1;
+console.log(typeof myName)
+number
+
+var badMemories = null;
+console.log(typeof(badMemories));
+null hai but object hai. (ye bug hai)
+
+3.convert a string to a number;
+ we just need  to add the '+' sign before the string ,there are two type first one add + an second is add number(construtor).
+ 
+ var myfavNuum = "10";
+ console.log(typeof +myfavNuum);
+ console.log(typeof Number(myfavNuum));
+
+4. number to string  convert ?
+ther are two opetion first String constuor and second one + that is  add back side ok.
+
+let str = 5;
+console.log(typeof str)
+number
+console.log(typeof  String(str));
+console.log(type (str + ""));
+
+5. Explain the concept of truthy and falsy values in js .
+
+ans=> trusty values that is as true when we used in condition satement.
+ex.
+1. true
+2. Ant non-empty string ('hello')
+3. Any non zero number (42)
+4. Arrays and objects, even if they are not  empty.
+
+ans => falsy values are treated as false in boolean contexts,
+ex,
+1. false 
+2. 0 zero
+3. '' (an empty string)
+4. null
+5. undefined 
+6. Nan (Not a number)
+
+6.  To check if a non-empty string is truthy or falsy  in js  we can directly use satement.
+
+var myName = 'vinod';
+if(myName){
+    console.log('it is To reaning truthhly b')
+}else {
+    console.log('its is false value')
+}
+ ans=> is and truthly valu e and hai qki ye myname is nonempty string hai .
+
+
+var myName = '';
+if(myName){
+    console.log('it is To reaning truthhly b')
+}else {
+    console.log('its is false value')
+}
+ ans=> its is false value qki ye myname is empty string hai.
+
+
+ //* ===========================ParseInt & ParseFloat  Section ======================= *//
+  parseInt and paseFloat  are both functions in js used for converting string to numbers, but they have different used for cases.
+
+parseInt : Definition : ParseInt is used to parse a string and convert it to an interger (whole number)
+
+const myString = "42";
+const myNumber = parseInt (myString, 10);
+console.log(myNumber);  //output is 42
+
+const myString = "42.5";
+const MyNumber = parseInt(myString);
+console.log(myNumber); // output is 42;
+
+
+ParseFloat: Defination : parseFloate is used to parse a string  and convert it to a floating-point number (decomal number).
+
+const myString = "42.5";
+const myNumber = parseFloat(myString);
+console.log(myNumber) //output is 42.5;
+
+
+example
+console.log(parseInt('123')); //output is 123
+
+(default base-10)
+
+console.log(parseInt(123,10));  //output is 123
+
+console.log(parseInt ("               123 "));  //output is 123
+
+
+console.log(parseInt("077"));  //output is 77
+console.log(parseFloat("077")); //output is 77
+
+console.log(parseInt("1.9"));  //output is 1
+console.log(parseFloat("1.9"));  //output is 1.9
+
+Nan === Nan , Why is it false?
+if (Nan === Nan){
+    console.log(both are equal)
+}else{
+    console.log("not equal")
+}
+
+false hai ouput //
+
+<!-- solve this  -->
+
+<!-- =======================Concatentation in javascript==================== -->
+
+ In js ,the sign(+)  is not only used for arthmetic addition but also for string concatennation ,when  the 
+ + operator  is used with string ,it cpncatenates the string together.
+ It important to note that if any operand of the + operator is string javascript will treate the other operands as string as well ,resulting in string as well , resulting performs numaric add concatenation if both operands are numeric ,the + operator performs numeric addition.
+
+ ex=>
+ const str = "hello " + "world"
+ console.log(str);
+console.log(10 + "20") //output 1020
+console.log("java" + "script"); // output javascript
+console.log(" " + " ")  //output blank
+console.log(" " + 0); //output 0
+console.log("vinod" - "thapa"); //NaN
+console.log(true + true); // 2
+console.log(true + false) //1
+console.log(false + true) //1
+console.log(false + false) //0
+
+
+<!-- ==================================Expressions & operatorts========================= -->
+
+5 =>operand
++ =>operator
+in dono ko milakar expression
+
+
+Type of Operators
+
+assignment operators (+)
+arithmatic operators (=)
+Subtraction Operators (-)
+comparison operators (==)
+Logical operators ()
+string operators ("string")
+unary operators ()
+Ternary (conditional) operator ()
+Type Operators ()
+
+Equal=> (==)
+console.log(5==5);
+console.log(5==="5")value ke sath datatype bhi check krte hai.
+
+NotEqual=> (!==)
+
+<!-- ==================================Logical operators<!-- ==================================-->
+Logical operators=>
+there are three main operstors &&(logical And ), || (logical OR), and (logical Not)!
+
+1. Logical And && returns  true if  both operands are true, otherwise ,it returns false.
+
+True + True => True(1)
+False + True => False(0)
+true + false => true(1)
+False + false=> false(0)
+
+var a = 5;
+var b = 6;
+console.log(x > 0 && y < 0); //false
+
+2. Logical OR (||) : Returns true if at least one of the operands is true otherwise ,it returns false 
+ 
+ var a = 10;
+ var b = 20;
+ console.log(a>10 || b>20);
+
+3. Logical NOT (!); Returns  true if the operand is false, false if the operand is true.
+
+
+var isOpen = false;
+console.log(!isOpen);
+
+
+Iterview quetion
+1.Write a program thta determines if a persons if eligiable to drive based on their age being greter than or equal to 18
+and having a valid drivers license?
+
+
+var age = 18;
+var hadDrrivingLicence -= true;
+
+if(age > 18){
+    console.log('haddriving line true');
+
+}else{
+    console.loh('hadnotdrivinglince false')
+}
+ 
+ans =>  console.log('haddriving line true');
+
+
+
+ <!--=====================Ternary Operator================================  -->
+ 
+
+ syntax: 
+
+condition ? expressionIfTrue: expressionifalse;
+
+expressionIfTrue => we get the output, if condition is true.
+expressionifalse => we get the output ,if condition is false.
+
+let age =15;
+let result = age >= 18 ? 'yes' : 'no'
+
+
+
+<!-- ==================== controle Statement & loop ========================= -->
+
+
+1. if..Else Statement 
+2. Do While Loop
+3. switch statement 
+4. For Loop
+5.while Loop 
+6. For In / For Loop(later in array)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
