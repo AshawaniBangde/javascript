@@ -57,6 +57,7 @@ myname = variable name
 geeta = value
 
 8. DATATYPE
+<!-- ================================= DATATYPE ========================= -->
 THERE ARE TWO TYPE OF DATATYPE
 1. primative datatype => string, number , boolean,undefined, null, bigint,sysmbol
 2. object datatype =>an object, an array, a date 
@@ -162,6 +163,7 @@ if(myName){
  ans=> its is false value qki ye myname is empty string hai.
 
 
+<!-- =================================ParseInt & ParseFloat  Section========================= -->
  //* ===========================ParseInt & ParseFloat  Section ======================= *//
   parseInt and paseFloat  are both functions in js used for converting string to numbers, but they have different used for cases.
 
@@ -259,6 +261,7 @@ NotEqual=> (!==)
 Logical operators=>
 there are three main operstors &&(logical And ), || (logical OR), and (logical Not)!
 
+<!-- ====================  Logical And (||) ========================= -->
 1. Logical And && returns  true if  both operands are true, otherwise ,it returns false.
 
 True + True => True(1)
@@ -270,11 +273,13 @@ var a = 5;
 var b = 6;
 console.log(x > 0 && y < 0); //false
 
+<!-- ==================== Logical OR (||) ========================= -->
 2. Logical OR (||) : Returns true if at least one of the operands is true otherwise ,it returns false 
  
  var a = 10;
  var b = 20;
  console.log(a>10 || b>20);
+<!-- ====================  Logical NOT ========================= -->
 
 3. Logical NOT (!); Returns  true if the operand is false, false if the operand is true.
 
@@ -326,6 +331,112 @@ let result = age >= 18 ? 'yes' : 'no'
 4. For Loop
 5.while Loop 
 6. For In / For Loop(later in array)
+
+<!-- ==================== if Else Statement ========================= -->
+1. if..Else Statement =>
+
+if (condition){
+    //code to be executed if the condition is true
+}else{
+    code to be executed if the condition is false
+}
+var tem = 25;
+if (temp>30){
+    console.log('lets got to beach')
+}else{
+    console.log('not go to beach')
+}
+
+<!-- ====================  switch statement  ========================= -->
+switch statement used to perform different actions based on different condition.
+
+syntax:
+switch (expression)
+case value1:
+
+break;
+
+case value2:
+
+break;
+
+default:
+
+question:
+Explain how the switch statement works and will be the output whenthe varible day is sat to different values.
+
+var day = "Monday";
+
+
+switch(day){
+    case "Monday" : 
+    console.log('today is monday');
+    case "Friday" :
+    console.log("omg lets have party");
+    case "Sunday" :
+    console.log(lets go to move);
+    case "Sunday" :
+    console.log("Lets go to movie");
+
+    default :
+    console.log('no need')
+}
+
+
+<!-- ====================  For Loop  ========================= -->
+
+for (initializer; condition; iteration){
+
+ }
+initializer  => var num = 10;
+condition => num <10;
+iteration => num++;
+
+<!-- ====================  while Loop   ========================= -->
+A while  loop in js is a controle  structure that repeatedly excutes a block of code as long as specified condition remains
+true,the loop continuesiterating while the condition is true and it terminates when the conditions become false.
+
+syntax -while loop
+while (condition){
+
+}
+let i=1;
+while(i<=10){
+    conssole.log(i);
+    i++;
+}
+<!-- ====================  Do While Loop  ========================= -->
+
+syntax - do while loop
+do {
+    
+} while (condition);
+
+let k = 1;
+do{
+    console.log(k)
+    k++;
+} while (k<10)
+
+
+
+ j=1 
+i=1 *
+    * *
+    * * *
+    * * * *
+    * * * * *
+
+    logic (i==j) print*
+
+    for (var p=1; p<=5; p++){
+    var pattern = "";
+    for (var j = 1; j<=p; j++){
+        pattern = pattern + "*";
+    }
+    console.log(pattern);  
+   }
+
 
 
 

@@ -108,14 +108,136 @@ console.log("20" + 10 + 10); //201010
 console.log("5" - 3)
 
 
+var temp = 25;
+if (temp>=30){
+    console.log('lets got to beach')
+}else if(temp >=20 && temp < 30){
+    console.log('not go to beach')
+}else{
+    console.log('lets go room')
+}
  
+ 
+let userAge = 12;
+let isCitizen = true;
+let isregister = false;
+
+if (userAge >= 18){
+   if(isCitizen){
+    if(isregister){
+         console.log('you are eliable to vote')
+    }else{
+        console.log('you are not eligible due to registration status')
+    }
+
+   }else{
+    console.log('you are eliginle due to citizenship')
+   }
+}else{
+    console.log('you are not eligible to vote')
+}
+
+// odd or even number (jo sirf 2 se divede ho)
+
+
+var num = 6;
+if (num % 2 == 0){
+ console.log('num is even');
+}else{
+    console.log('num is odd');
+}
+
+// prime number (ek to 1 hao dusra vo khud hai jisse vo devide ho)
 
 
 
+// switch sattememnt
+var day = "Monday";
 
 
+switch(day){
+    case "Monday" : 
+    console.log('today is monday');
+    case "Friday" :
+    console.log("omg lets have party");
+    case "Sunday" :
+    console.log('lets go to move');
+    case "Sunday" :
+    console.log("Lets go to movie");
+
+    default :
+    console.log('no need')
+}
 
 
+// while loop
+let i=1;
+while(i<=10){
+    console.log(i);
+    i++;
+}
+
+// do while loop
+
+let k = 1;
+do{
+    console.log(k)
+    k++;
+}while (k<10)
+
+
+    // for loop
+    for (var num =1 ; num<=10; num++);
+     
+
+    // lets crete table 5;
+
+    var num = 1;
+    while(num<=10){
+        console.log("5 * " + num + ' = ' + (5*num));
+        num++;
+    }
+
+
+    // calculate the sum of numbers from 1 to 10 using loop;
+
+
+    sum = 0
+    for (var num= 0 ; num<=10; num++){
+        result = num+sum;
+        console.log(result);
+    }
+
+    // prime number khud se ya 2 se divide ho 
+
+    var num = 12;
+    var isPrime = true;
+
+    for (i=2,i<num;i++;){
+        if(num % 1 == 0){
+            isPrime= false;
+            break; 
+        }
+    }
+
+
+    // 8 table
+     
+    // 
+//     j=1 
+// i=1 *
+//     * *
+//     * * *
+//     * * * *
+//     * * * * *
+
+for (var p=1; p<=5; p++){
+    var pattern = "";
+    for (var j = 1; j<=p; j++){
+        pattern = pattern + "*";
+    }
+    console.log(pattern);  
+}
 
 
 
