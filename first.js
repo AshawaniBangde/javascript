@@ -240,6 +240,235 @@ for (var p=1; p<=5; p++){
 }
 
 
+// funcation is resuable code 
+
+
+function addition(a,b){
+return a + b;
+}
+
+console.log(addition(5,15))
 
 
 
+function greet(name){
+    console.log('hello '  + name + ",Welcomre to thapa tehchnical")
+}
+
+greet("ram");
+greet("ajay");
+
+
+function adit(a,b){
+    return a + b;
+}
+console.log(adit(4,5))
+
+
+
+var myFavname = "geeta";
+
+myFavname = "ashwani";
+
+console.log(myFavname)
+
+
+let myFavName = "geeta";
+
+myFavName = "ashwani";
+
+console.log(myFavName)
+
+    const myFavrName = "geeta";
+
+// myFavrName = "ashwani";
+
+console.log(myFavrName);
+
+// TEMPLATE STRING
+let firstName = 'geeta';
+let lastName =   'bangde';
+
+let fullName = `${firstName} ${lastName}`
+console.log(fullName)
+
+function summ(a,b=10){
+    return a + b;
+}
+console.log(summ(5,20))
+
+// normal function
+function calculator(a,b,opertor){
+    let results;
+
+    switch(opertor){
+        case "+":
+        results = a + b;
+       
+
+        case "-":
+        results = a-b;
+        return results
+        default:
+        return "no opertor found";
+    }
+
+}
+console.log(calculator(5,2,"+"));
+// fat arrow function
+
+const calculatora =(num1,num2,opertors) =>{
+    let resultss;
+
+    switch(opertors){
+        case "+":
+            resultss = num1 + num2;
+       
+
+        case "-":
+            resultss = num1-num2;
+        return resultss
+        default:
+        return "no opertor found";
+    }
+
+}
+console.log(calculatora(5,2,"+"));
+
+// reserve string
+
+const isReverse = (str) => {
+    let reverse ='' ;
+
+   for(let char=str.length-1; char>=0; char--){
+    reverse= reverse + (str[char]);
+
+   }
+   return reverse;
+}
+console.log(isReverse("geeta bangde"));
+
+// palidndrome(isi) word same 
+
+let arr = [];
+console.log(typeof arr)
+//output object
+
+// let fruts = new Array ['apple','mongo']
+// console.log(fruits[0]);
+
+let fruits  = ['apple','mongo']
+
+console.log(fruits[0]);
+
+// let fruitss = ['apple','orange', 'mango','graps','banana']
+
+//  for (let item of fruitss){
+//     console.log(item)
+//  }
+
+//  let fruit = ['apple','orange', 'mango','graps','banana']
+
+//  for (let item=0; item<fruit.length;item++){
+//     console.log(item)
+//  }
+
+// fruitss.forEach((currElem ,index, arr)=>{
+//     console.log(arr)
+// });
+
+let furits = ['apple','orange', 'mango','graps','banana']
+
+const myMap = furits.map((curElement, index, array)=>{
+    return`${curElement} ${index}`
+  
+  
+   });
+
+   console.log(myMap)
+
+//  interview questin
+//    <!-- write a function that uses the filter method to return an array containing only the products with a price less than or equal to 500 -->
+
+const products = [
+    {name: "laptop" , price:1800},
+    {name: "tv" , price:900},
+    {name: "difine", price:500},
+    {name: "color", price:200},
+    {name: "main", price:150}
+];
+
+const filterProducts= products.filter((curEem)=>{
+    return curEem.price <= 500
+    // console.log(curEem.price);
+});
+
+console.log(filterProducts);
+
+// filter the unique values
+
+const numbers = [1,2,3,4,8,5,8,6,7,8,9]
+
+let unuquevalue = numbers.filter((curEemlemt, index,arr)=>{
+  return arr.indexOf(curEemlemt) === index;
+    // console.log(index);
+    // console.log(arr);
+});
+
+console.log(unuquevalue);
+
+// calculates the total price of the items in shoping cart 
+
+ const productprice = [100,200,300,500]
+ const totalPrice =  productprice.reduce((accumulator, cuurentElement) => {
+    return accumulator + cuurentElement;
+
+}, 0);
+console.log(totalPrice);
+
+  
+
+// let test = 'thapa thechnial \"welcome"\ js \n \"course"\ in super fast '
+//  console.log(test);
+
+
+//  let text = "vinod thapa"
+//  let strArr = Array.from(text);
+//  console.log(strArr);
+
+let text = "hello javascript ,welcome to out world best js course"
+let resul = text.slice(1,4)
+console.log(resul);
+
+
+
+const str = "apple, banana" ;
+ let strArr = str.split(",").reverse().join();
+ console.log(strArr);
+
+
+//  <!-- a se z tak print krna hai -->
+//  console.log('a'.chartCodeAt(0))
+
+// console.log(String.fromCharCode(122))
+
+for(let char=97; char<=122; char++){
+    console.log(String.fromCharCode(char))
+}
+
+// check the vowels 
+
+
+// const checkAll = (sttr) => {
+//     const vowels = "aeiou"
+//     for (let char of value){
+//         console.log(sttr.include(char));
+//     }
+// }
+// let sttr = "my name is vinod thapa";
+// console.log(checkAll);
+
+
+// console.log()
+
+console.log(Math.round(4.5));

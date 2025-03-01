@@ -1,3 +1,4 @@
+<!-- BY THAPA THECHNICAL IN 11 HOURS YOUTUBE COURSE PART 1 -->
 1.WHAT IS JAVASCRIPT ?
 => js improves the user experience of the web page by converting  it from a statis page into an inetactive one.
 or
@@ -436,6 +437,799 @@ i=1 *
     }
     console.log(pattern);  
    }
+
+<!-- ====================  JAVASCRIPT FUNCATION  ========================= -->
+
+in javascript m a function is block of resuable code that performs a specific task or set of task, functions are used to organize into module and manageable pieces promote code rese. and make programe and make more readable.
+
+
+syntax=>
+
+       function functionName (parameters){
+        <!-- code to be executed -->
+        return result; //optional return statement
+
+       }
+
+
+ <!--Function Declaration -->
+
+
+syntax Function Declaration
+
+    function greet(){
+        console.log("welcome to thapa thechnical js course")
+    }
+
+
+function => function keyword
+greet() => function Name
+{
+    iske andar jo bhi likhte use function body khte hai 
+}
+
+<!--Function Invocation -->
+
+greet() =>we need to call the function name
+and function call ke jo value pass krte hai use function aruguments khte hai .
+
+
+
+<!-- function defination -->
+
+function sum(){
+    var a = 4,
+    b=5;
+    console.log(a+b);
+}
+
+sum();
+
+
+<!-- function Parameter -->
+
+function greet (parameter1,parameter2,parameter3){
+    console.log("best js course");
+}
+
+
+(parameter1) => we need to add values here (parameter)
+
+
+<!-- function Argument -->
+
+
+greet(argument1,argument1,argument1)
+
+argument1 => we need to call the function name
+
+
+<!-- function expressions -->
+A function expression is way to  define a function as part of an expression, it can be either named or anonymous ,if its named ,its become a named function expression.
+
+   var myName = function sum(a,b) {
+    console.log(a+b)
+   };
+
+   result(10,15)
+
+
+<!-- function Annoymous-->(yesa function jiska koi nam na ho taht is called Annoymous function)
+Annoymous ka mtlb hota hai jiska koi ata pata nhi hai .
+
+
+syntax
+
+function (a,b){
+    console.log(a+b)
+};
+
+
+
+<!-- retun keyword -->
+
+Retuning a sum of two number
+
+function sum(a,b){
+    console.log("hello i am gunction")
+    return a + b;
+}
+
+var result = sum(a+b);
+
+note=> returnkeyword value ko retun krwata hai or retun ke agr kuch print krte hai vo nhi chalta hai but but retin keyword ke upper vo chal jayenga (console.log)
+
+
+<!-- IIFE immediately invoked function expression -->
+
+An IIFE , or Immediately Invoked function Expression, is a javascript function that is defined and executed immediately after its creation. it is way to create a self -contained blockof code that doesnt interfere with the surrounding code and execute immediately.
+ <!-- first time page ko load krne ke liye is function a use krte hai -->
+
+Syntax : (function (){
+
+
+})();
+
+example:
+
+(function (a,b){
+    console.log(a+b)
+})(a,b);
+
+
+
+<!-- ====================  ECMA SCRIPT  ========================= -->
+
+Ecma Script=>
+
+javascript=>created 1996
+ECMA=> ECMA INTERNATION 1997
+es5/ecmascript =>2015 ES-6
+
+<!-- ====================  ES-6  ========================= -->
+
+1.LET AND CONST
+2.TEMPLATE STRING
+3.DEFAULT ARGUMENTS 
+4.ARROW FUNCTION
+5.DESTRUCTURING
+6.OBJECT PROPERTIES
+7.REST OPERATORS
+8.SPREAD OPERATORS
+
+
+<!-- ==================== LET AND CONST ========================= -->
+
+let keywords: The let keywords is used to declare variables with block scope. variables declared with let are mutuable ,meaning  their values can be reassigned.
+
+example 
+<!-- for var -->
+var myFavname = "geeta";
+
+myFavname = "ashwani";
+
+console.log(myFavname)
+
+<!-- let -->
+let myFavName = "geeta";
+
+myFavName = "ashwani";
+
+console.log(myFavName);
+
+<!-- const  -->
+const myFavrName = "geeta";
+
+<!-- myFavrName = "ashwani"; -->
+
+console.log(myFavrName);
+
+
+const keywords :  the const keywords is used to declare variable with block scope, but oncw a value is assigned to a const variablem it connot be reassigned.const variable are immutable.
+
+
+
+
+<!-- ==================== TEMPLATE STRING ========================= -->
+
+iN ECMA  ES-6 ,template string, also known as template literals ,provide a convenient and flexiable way to create strings in javascript . template  strings are enclosed in backticks (``) rather than single or double quotes.
+
+let firstName = 'geeta';
+let lastName =   'bangde';
+
+let fullName = `${firstName} ${lastName}`
+console.log(fullName)
+
+
+
+<!-- ==================== DEFAULT ARGUMENTS   ========================= -->
+
+In ecma script es6 , default parameters were introduced ,providers a more concise way to handle parameters defaults, Defaults parameters allow you to  specify default values for function parameters in the function declarations is self. if a parameter is not when the fuction is called the default value is used.
+
+
+function sum(a,b){
+    return a + b;
+}
+
+console.log(sum(5))
+
+
+<!-- ==================== FAT ARROE FUNCTION  ========================= -->
+
+IN ECMA SCRIPT  6 (ES6) , arrow funcation ,also know as fat arrow functions were introduced as a concise way to write  annoymous functions.
+
+FAT ARROE FUNCTION syntax =>
+<!--  -->
+const functionname = (param1,param2) =>{
+    return result;
+}
+
+<!--  -->
+
+const sum = function (a,b){
+    let result  = `the sum of ${a} and ${b} is ${a+b}.`;
+    console.log(result);
+};
+sum(5,5);
+
+<!-- create a calcularor -->
+function calculator(a,b,opertor){
+    let results;
+
+    switch(opertor){
+        case "+":
+        results = a + b;
+       
+
+        case "-":
+        results = a-b;
+        return results
+        default:
+        return "no opertor found";
+    }
+
+}
+console.log(calculator(5,2,"+"));
+
+
+<!-- ==================== Arrays  ========================= -->
+
+definations=>
+javascript array is an object that represents a collection of similar type of elements.
+
+Each value (name) will be called as an element.
+                       -3      -2       -1
+ex. const person = ["ram","geeta","sita"];
+
+    index number       0,   1       3
+
+    start index =>lower Index/lower Boundary
+    last index => upper Index/upper Boundary
+
+    ecma script 2022 also introduces new .at() method in arrays which helps  to index from last elements too easily.
+
+
+<!-- ==================== What we will cover  ========================= -->    
+
+1. creating arrays /Accessing
+Elements /Modifying Elements
+
+2. How to insert ,Add,Replace and Delete Elements is Array(CEUD)
+
+3. Filter in on Array
+
+4. very Very Array methods
+
+5. Array traversal /Iterating over Array
+
+6. Searching Array
+
+7. How to sort and compare on array
+
+let arr = [];
+console.log(arr)
+
+
+<!-- Using array constructor -->
+let fruts = new Array ['apple','mongo']
+console.log(fruts)
+
+
+<!-- using array literal -->
+
+let fruits  -= ['apple','mongo']
+
+console.log(fruits[0]);
+
+<!-- we can also crete an empty array -->
+
+let arr = [];
+
+<!-- Array Travesal / Iterating over Arrays -->
+
+1: for of loop , also know as iterable
+=> For..of Loop: the for..of loop is used  to create to iterate over the values of an iterable object,such as arrays, strings, or other iterable object.
+ <!-- ==================== for of  loop  ========================= -->
+Example: for of  loop
+ let fruits = ['apple','orange', 'mango','graps','banana']
+
+ for (let item of fruits){
+    console.log(item)
+ }
+
+<!-- ==================== for  loop  ========================= -->
+Example: for  loop
+let fruits = ['apple','orange', 'mango','graps','banana']
+
+ for (let item=0; item<fruits.length; item++){
+    console.log(item)
+ }
+
+<!-- ==================== for in   ========================= -->
+2: for in loop
+=> for..iin loop: the for ..in loop is used to iterate over the properties (including indices ) of an object.
+
+Example:for in loop (in jo index number hai )
+ let fruits = ['apple','orange', 'mango','graps','banana']
+
+ for (let item in fruits){
+    console.log(item)
+ }
+<!-- ==================== forEach  ========================= -->
+
+3: forEach Method (performs an action on each element  go with foreach) (value retun nhi krta hai)
+defination
+=> the arr.forEach() method calls the provided function once for each element  of array . the  provided  function may perform any kind of operation on  the elements on the given array.
+
+
+note: foreach value jab use krte vo koi value return nhi krta hai.
+
+Syntax --foreach
+
+array.forEach(function
+callback(currentValue, index, array){
+   // your logic here
+},thisValue)
+
+
+here's breackdown of each part:
+
+array: the array on which the foreach method is called.
+callback: A function that will be called once for each elements in the array.
+currentValue: The current element being processed in the array.
+index: (optional): The index of the current element being  processed.
+array (optional) : the array foreach was called upon.
+thisValue (optional) : A value to use as when executing the callback function.
+
+synntax -forEach
+
+<!-- fat arrow function -->
+array.forEach((currentValue, index, array)=>{
+    //your logic here 
+}, thisvalue);
+
+
+example :
+let fruitss = ['apple','orange', 'mango','graps','banana']
+
+ const forEcah =fruits.forEach((currElem ,index, arr)=>{
+    return`${currElem} ${index}`
+});
+
+console.log(forEcah);
+<!-- ==================== Map method ========================= -->
+
+Map defination :  (new array crete krna ho to)
+map() creates a new array from calling a function for every array element. map() does not chnage the original array.
+
+
+syntax- Map()
+array.map(function callback(currentValue,index, array){
+    // this logic here
+}, thisValue);
+
+
+<!-- fat arrow function -->
+
+array.map((currentValue, index, array) => {
+    //your logic here
+}, thisvalue)
+
+
+
+example for map =>
+
+ const mymap = furits.map((curElement, index, array)=>{
+  return`${curElement} ${index}`
+
+
+ });
+ console.log(mymap)
+
+
+ note => map method jo nya array bna kr dete or ise muted bhi nhi krta hai . (value retun krta hai) 
+
+
+<!-- ===================key Difference for interview================== -->
+<!-- Return Value : -->
+
+forEach : It doesn't return a value , the foreach method is used for iterating over the elements of an array and performing a side effect, such as modifiying the array or performing a task for each elements,
+
+Map : It return  an new  array containing the applying a function to each element in the original array ,the original array remains unchanged.
+
+
+<!-- Chaning-->
+ForEach : It does not return a value , so its con not directly chained other array methods. (filter nhi lga skte)
+
+Map : Since it return a new array , you can chain other array methods after using map. (isme lga skte )
+
+<!-- use Cases  -->
+
+ForEach : used  when you want to iterate over the array elements and performs an action on each element, but you do not need a new array.
+
+Map: used when you want to create a new based on the transformation of each elements in the array.
+
+
+<!-- array methhod -->
+
+1. push() : Method that adds one or more elements to the of an array.
+2. pop() : Methods that remove the last elements from an array.
+3. unshift : methods that adds one or more elements to the begining of an array.
+4. shift() : methods that remove  that first elements from an array.
+5. splice() : method that  instances  chnages the contents of an array by removing or replacing exiting elements and /or adding new elements in place.
+
+splice syntax:
+
+splice(start, deleteCount, item1 , item2, ....,itemN)
+
+const person = ['ram','sham']
+person.push('gita') (sbke liye same example)
+
+
+
+<!-- searching array -->
+
+For Search we have - indexOf , lastindexOf & includes
+
+indexOf Methods  => The indexOf method returns the first index at which a given elements can bee found in array in the array, or -1 if it  is not present.
+
+syntax:
+
+indexof (searchElement):
+IndexOf (searchElements, forindex);
+
+const number = ['ram','sham','menu','meena']
+persons,indexOf('menu') ,2
+note : menu ka index number kya hai.
+
+includes : =>
+The includes method checks whether an array includes a certain elements, returning true or false.
+
+syntacx : includes(searchElement, fromIndex)
+
+
+<!-- =========================Filter is an Array======================= -->
+
+Search + Filter
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+find method : The find method is used  to find the first element in an array that satisfies a provided testing functions. it returns the first matching element or undefined if no element is found.
+
+example=>
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+const result = number.find((currElem) => {
+    return curElem>5;
+
+})
+ not 5 se bada value find krke deta hai 
+
+findIndex Method : the findIndex() method of typeArray instances return the index of the first element in a array that  satisfies the provided testing functions if no elements satisfy the testing  functions, -1 is returned.
+
+example=>
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+const result = number.findIndex((currElem) => {
+    return curElem>5;
+
+})
+
+note => ye iska index deta hai.
+
+filter method (important) :the filter method creates a new array with all elements that pass the test implemented by the provide function.
+
+syntax:
+
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+const result = number.filter((currElem) => {
+    return curElem>4;
+
+});
+
+note: jo 4 se bade vo valy=ue return krta hai.
+<!-- =========================how to sort and compare an array======================= -->
+/ ===========how to sort and compare an array================//
+
+Sorting an Array: the sort method sorts the elements of an array in place and returns the sorted array. By Default ,it sorts elements as strings.
+
+const numbers = ['bannana','kele','mongo','kirana']
+
+numbers.sort();
+
+console.log(numbers);
+
+
+
+<!-- =========================very important array methods ======================= -->
+Map(), Filter(), Reduce(),
+
+Map() create a new aaray from calling a function for every array elements
+Map()  does not exexute the function for empty  elements.
+Map() does not chnage the original array.
+
+<!-- Reduce method -->
+(note: final total krna ho to reduce method ka use krte hai)
+
+the reduce method in js is used to accumulate or reduce an array to a single value. it iterates over the elemements of an array and applies a callback function to a each element, updating an accmulator value with the result. thereduce method takes a callback function as its first arguments and an optional intial value for theaccumulator as the second arguments.
+
+
+syntax:
+accumulator (isme price ka total add hota hai)
+
+array.reduce(funtion callback(accumulator, cuurentValue, index, array){
+    <!-- your logic here -->
+    //return the updated accmulator value
+
+}, initialValue)
+
+
+// calculates the total price of the items in shoping cart 
+
+ const productprice = [100,200,300,500]
+ const totalPrice =  productprice.reduce((accumulator, cuurentElement) => {
+    return accumulator + cuurentElement;
+
+}, 0);
+console.log(totalPrice);
+
+
+
+
+<!-- =========================JAVASCRIPT STRINGS ======================= -->
+<!-- ======================WHAT WE WILL COVER================= -->
+
+1.String & its properties
+2.Escape Character
+3. Extracting String Characters
+4. Exatracting Strings Parts
+5. Strings SearchMethods
+6.Replaccing Strings content
+7. other useful Methods
+
+<!-- =============================String & its properties==================== -->
+Strings created with single or double quotes works the same.
+
+
+<!-- String properties -->
+length: property that returns the length of the string (number of charter)
+
+const str = "hello world"
+
+console.log(str.length)
+
+output -13(including space also)
+
+
+<!-- Escape Character -->
+ In js , the backlash \ is used as an escape charater .its allows you to include special charaters in string
+
+ code         Result         Description
+ \*              ''         Single quote
+ \*            ""          double quote
+ \\            \            backlash
+
+
+ let test = 'thapa thechnial \"welcome"\ js \n \"course"\ in super fast '
+ console.log(test);
+
+ <!-- Strings Search Methods -->
+
+ indexOf() : the indexOf() method returns  the undex (position) of first the occurrence of a string in a string, or it returns  -1 if the string is not found:
+
+ syntax:
+
+ indexOf(searchString)
+
+ indexOf(searchString, postion)
+
+
+ let text = "vinod thapa";
+ <!-- console.log(text.indexOf('Thapa')); -->
+ let text = "vinod thapa"
+ let strArr = Array.from(text);
+ console.log(strArr);
+
+
+ lastIndex() : the lastIndex()  method  returns the index of the last occurance of a specified text in a string.
+(lastundex used krte hai uska index number find krke deta hai)
+ syntax:
+
+ lastIndexOf(searchString)
+ lastIndexOf(searchString,postion)
+
+ search() : The search method searches a string for a string or a regular and return the position of the match.
+
+
+
+match() : Return an array of the matches values or nykk if not match is found.
+
+matchAll() : Returns an iterator of all matches ,providing detailed information about each matchmreturns an empty iterator if nor match is found.
+
+includes() : Retursn true if the string contains the specified value, and false otherwise.
+
+startWith() : the StartWith() method returns true if a string woth a specifiend value. otherwise it returns false.
+
+endWith() : The endWith() method returns true if  a string ends with a specifiend value. otherwise it returns false.
+
+ 
+
+
+<!-- =============================Exatracting Strings Parts==================== -->
+
+slice(): extractes  a part of   sring and returns the extracted part in new string.
+
+1. javascript  counts postions from zero.
+2. slice() extracts up to but not including indexEnd.
+note => last index nhi deta hai output me
+ex:
+str.slice(1,4)
+1 -> first index
+4 -> last index number
+
+let text = "hello javascript ,welcome to out world best js course"
+let result = text.slice(1,4)
+console.log(result);
+
+substring : Extracts a portion of the string based on starting  and ending indices.
+
+syntax:
+
+substring(indexStr)
+
+ replace(): The Replace method is used to replaces a specified value with another value.
+ (words ko replace krta hai)
+<!-- =============================Exatracting Strings Characters==================== -->
+
+ charAt() method, => str.charAt() =>
+
+ charCodeAt method, =>str.CharCodeAt() => carhcode dikahta hai 
+
+ at() method => (.at() method se array ka negative value deta ecma script 2022 me aaya tha)
+
+ <!-- =============================Other userful methods===================== -->
+ toUpperCase();
+ toLowercase();
+
+ trim method  => space remove krne ke liye 
+
+ split method => string ko array ko conver krke deta 
+
+ join method => array ko string me 
+
+ const str = "apple, banana" ;
+ let strArr = str.split(",").reverse().join();
+ console.log(strArr);
+
+
+ <!-- ================================Math OBJECT=================================== -->
+ Math.round()
+ Rounds to the nearest integer.
+
+ ex: console.log(Math.round(4.5));
+
+ output //5
+
+ Math.floor()
+ always rounds down to the nearest integer
+
+ ex:
+ console.log(Math.floor(4.9));
+
+ output :4
+
+ Math.ceil() (+1)
+ always rounds up to the nearest integer
+
+ ex: console.log(Math.ceil(4.2)) 
+ output 5
+
+Math.abs (absolute)
+
+in simple,how far the number is from0,it will be always positive.
+
+console.log(Math.abs(5));
+
+Math. trunc(x) (truncate)
+Reurns the interger part of x
+console.log(Math.trun(3.7));
+
+Math.pow(x.y):
+Returns the value of x to the power of y.
+
+console.log(Math.pow(2,5));
+
+Math.ramdom
+Math randoom : Math random() returns a random numbern between 0 (inclusive) and 1 (exclesive).
+
+
+<!-- ============================== BOM (BROWSER OBJECT MODAL) AND DOM(DOCUMENT OBJECT MODAL) ======================= -->
+
+WINDOW (window mtlb hammara computer ka windoe inscept click console me dikahat hai)
+a. document (dom) -> html-> body -> head -> a -> p
+b. navigator (bom) -> screen, location, frames, history,xmlHTTPSrequest
+c. object (javascript) -> object, Array,function
+
+
+window object => 
+The  window object represents the global window in a browser .
+Both the Browser object modal (bom) and the Document object Modal (DOM) are part of the window object.
+
+
+bowser Object modal =>
+the bom represents the browser as an object and provides methods and properties for interacting with browser itself (not directly related  to the content of a web page)
+
+Examples of bom features include window.navogator for browser information ,window .location for url manipulation and window for displaying alerts.
+
+
+document.body.childNode
+
+solitions:  [text,comment, text ,div text, script, text]
+innerHTML : "\n  hello\n"
+innerTEXT : : "hello world"
+textContent : null
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<body>
+<h1>hello</h1>
+<p> hello paragraph</p>
+<script>javascript</script>
+</body>
+</head>
+</html>
+
+<!-- the entire DOM  tree (object) is then accessible to javascript -->
+
+
+DOM (The  Document object Modal ) is a tree-like represents of the HTML  document, it provides a way to interact with the html document  using js. the dom provides multiple properties and methods to dyanamically change the content of the html document using js.
+
+<!-- DOM Properties -->
+document
+getElementsById(id)
+geElementsByClassName(className)
+getElementsByTagName(tagName)
+QuerySelector(selector)
+QuerySelectorAll(selector)
+innerHtml
+textContent
+style
+
+<!-- Dom Methods -->
+
+createElement(tagName)
+appenChild(node)
+removeChild (node)
+addEventListner(event, function)
+removeEventListner(event,function)
+setAttribute(name,value)
+getAttrubyte(name,value)
+etc
+
+<!-- what is dom -->
+dom ke vjh se js jo hai html ke content ko dyanamically change kr pate hai 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
